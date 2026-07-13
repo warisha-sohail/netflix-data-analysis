@@ -5,9 +5,11 @@ This repository provides an end-to-end analytics and intelligence solution that 
 
 ## Live Links & Previews
 * **Interactive Power BI Dashboard:** https://app.powerbi.com/view?r=eyJrIjoiODJmY2EwOWMtYzY4NC00Njg5LTkzMGQtMWI2NDNmYTMzY2VlIiwidCI6IjVhNzQwY2Q3LTU3NjgtNGQwOS1hZTEzLWY3MDZiMDlmYTIyYyIsImMiOjEwfQ%3D%3D
-* **Exploratory Notebook:**
+* **Exploratory Notebook:** https://github.com/warisha-sohail/netflix-data-analysis/blob/main/netflix_exploration.ipynb
 
 ## Dashboard Preview
+![Netflix_Dashboard](Netflix_dashboard-screenshot.png)
+
 *Figure 1: Multi-page interactive Power BI workspace tracking global production engines and catalog growth trends.*
 
 ## Tech Stack & Tools Used
@@ -40,7 +42,7 @@ This repository provides an end-to-end analytics and intelligence solution that 
   * Catalog Currency $\rightarrow$ Maximum of release_year
 
 **2. Movie Insights Page (Film Analysis)**
-*Locked down via page-level filters where type is evaluated explicitly as "Movie".*
+<br>*Locked down via page-level filters where type is evaluated explicitly as "Movie".*
 * **Movie Genres (Clustered Bar Chart):**
   * *Y-Axis:* listed_in (Top 5 Genres)
   * *X-Axis:* Count of show_id
@@ -53,7 +55,7 @@ This repository provides an end-to-end analytics and intelligence solution that 
   *  Classic Movies $\rightarrow$ Distinct Count of show_id (Filtered where release_year < 2000)
 
 **3. TV Show Insights Page (Series Metrics)**
-*Locked down via page-level filters where type is evaluated explicitly as "TV Show".*
+<br>*Locked down via page-level filters where type is evaluated explicitly as "TV Show".*
 * **TV Ratings (Clustered Column Chart):**
   * *X-Axis:* rating
   * *Y-Axis:* Count of show_id
@@ -79,8 +81,7 @@ This repository provides an end-to-end analytics and intelligence solution that 
 Used to construct clean, clickable navigation filter tiles inside the sidebar menu by bucketing raw integers into era strings:
 
 **Code Snippet**
-
-Era = 
+<br>Era = 
 SWITCH(
     TRUE(),
     'cleaned_netflix_titles'[release_year] < 2000, "Classic (<2000)",
@@ -90,8 +91,7 @@ SWITCH(
 )
 
 ## Dataset Schema Reference
-
-The project handles raw tracking logs utilizing the following data parameters:
+<br>The project handles raw tracking logs utilizing the following data parameters:
 
 * 'show_id: Unique identifier assigned per entry (Movie/TV Show).
 * 'type': Broad categorization seperating 'Movie' and 'TV Show'.
